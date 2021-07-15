@@ -117,3 +117,22 @@ def home(request):
     return render(request, 'index.html')
 ```
 
+# Getting inputs from the websites you create
+
+Create a form as shown below. The `function_call ` is the routine to be written in the `urls.py` of the app that will service this request.
+
+```html
+<form action="function_call">
+    <input name="variable">
+</form>
+```
+
+And service the request with something like
+
+```python
+def url_check(request):
+    url=request.GET["url"]
+    computation= url+str(1)
+    return render(request,"result.html",{"result":computation})
+```
+
