@@ -3,3 +3,4 @@ __pycache__
 *.pyc
 /firstproject/assets/
 /amazon_reviews/assets/
+.DS_Store
