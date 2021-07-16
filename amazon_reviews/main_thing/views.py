@@ -6,8 +6,9 @@ def home(request):
     return render(request,"index.html")
 
 def url_check(request):
-    # url=request.GET["url"]
-    render(request,"result.html")
-    time.sleep(5)
-    return render(request,"result.html")
+    from . import shared_variables as sv
+    sv.url=request.POST["url"]
+    url=request.POST["url"]
+    from . import amazon_scrapper
+    return render(request,"result.html",{"url":url})
     

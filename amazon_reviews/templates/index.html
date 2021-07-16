@@ -1,6 +1,7 @@
 {%extends "base.html"%}
 {%block content%}
-<form action="url_check">
+<form action="url_check" method="POST">
+    {% csrf_token %}
     <input type="text" placeholder="Enter The URL" name="url">
     <button>Check</button>
     <!-- <input type="submit"> -->

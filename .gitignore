@@ -4,3 +4,4 @@ __pycache__
 /firstproject/assets/
 /amazon_reviews/assets/
 .DS_Store
+*.png

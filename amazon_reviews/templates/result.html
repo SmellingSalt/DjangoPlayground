@@ -1,1 +1,6 @@
 {%extends "base.html"%}
+{%load static%}
+{%block content%}
+<p style="text-align: center; padding:10%">Scroll Down for the image</p>
+<img src="{% static 'image.png' %}" alt="">
+{%endblock%}
